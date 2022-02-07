@@ -1,0 +1,43 @@
+<div>
+   
+        <form [formGroup]="editForm" (ngSubmit)="edit()" class="id">
+            <div class="id1">
+                <h3>Edit Employee</h3>
+            </div>
+            <div>
+                <label for="name">Full Name</label>
+                <br>
+                <input type="name" formControlName="aname" name="aname" id="aname" value="aname">
+            </div>
+                <span style="color: red;" *ngIf="aname.invalid && aname.touched">Only Characters are allowed</span>
+                <br>
+            <div>
+                <label for="designation">Designation</label>
+                <br>
+                <input type="text" formControlName="adesign" name="adesign" id="adesign" value="adesign">
+            </div>
+                <span style="color: red;" *ngIf="adesign.invalid && adesign.touched">Only Characters are allowed</span>
+                <br>
+
+            <div>
+                <label for="salary">Salary</label>
+                <br>
+                <input type="number" formControlName="asal" name="asal" id="asal" value="asal">
+            </div>
+                <span style="color: red;" *ngIf="asal.invalid && asal.touched">Enter the amount in rupees</span>
+                <br>
+                
+            <div>
+                <label for="age">Age</label>
+                <br>
+                <input type="number" formControlName="aage" name="aage" id="aage" value="aage">
+            </div>
+                <span style="color: red;" *ngIf="aage.invalid && aage.touched">Enter the age betweeen 18 and 150</span>
+                <br> 
+
+                <button style="background-color: blue; align-items: center;" [disabled]="editForm.invalid" type="submit">Submit</button>
+                <br>
+                <br>
+        </form>
+  
+</div>

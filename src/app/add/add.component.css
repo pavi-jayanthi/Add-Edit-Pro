@@ -1,0 +1,16 @@
+ .id1
+{
+    text-align: center;
+    border: 2px solid black;
+    border-width: medium;
+} 
+input{
+    width: 250px;
+    height: 25px;
+    margin-left: 500px;
+}
+.id
+{
+    border: 1px solid black;
+    text-align: center;
+}

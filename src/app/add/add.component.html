@@ -1,0 +1,32 @@
+<form [formGroup]="addForm" (ngSubmit)="add()" class="id1" >
+    <div class="id">
+        <h3 >Add Employee</h3>
+    </div>
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="name"  formControlName="ename" name="ename" value="ename" class="form-control" id="ename" >
+      <span style="color: red;" *ngIf="ename.invalid && ename.touched">Only Characters are allowed</span>
+    </div>
+    <div class="form-group">
+      <label for="design">Designation</label>
+      <input type="design"  formControlName="edesign" class="form-control" name="edesign" value="edesign" id="ename">
+      <span style="color: red;" *ngIf="edesign.invalid && edesign.touched">Only Characters are allowed</span>
+    </div>
+    <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="number"  formControlName="esal" class="form-control" name="esal" value="esal" id="esal">
+        <span style="color: red;" *ngIf="esal.invalid && esal.touched">Enter the amount in rupees</span>
+    </div>
+    <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number"  formControlName="eage" class="form-control" name="eage" value="eage" id="eage">
+        <span style="color: red;" *ngIf="eage.invalid && eage.touched">Enter the age betweeen 18 and 150</span>
+    </div>
+
+   
+    <button style="background-color: blue;" type="submit" [disabled]="addForm.invalid" class="btn btn-primary">Submit</button>
+    <br>
+    <br>
+  </form>
+
+ 
